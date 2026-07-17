@@ -1,0 +1,116 @@
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Container */
+
+.container{
+    min-height:100vh;
+    background:rgb(201, 118, 87);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+/* Card */
+
+.expense{
+    width:900px;
+}
+
+/* Form */
+
+.form2{
+    background:darkslategray;
+    padding:30px;
+    border-radius:8px;
+    margin-bottom:30px;
+}
+
+.form2 h2{
+    color:white;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+/* Django form */
+
+.form2 p{
+    margin-bottom:15px;
+}
+
+.form2 label{
+    display:block;
+    color:white;
+    margin-bottom:5px;
+    font-weight:bold;
+}
+
+.form2 input,
+.form2 select,
+.form2 textarea{
+    width:100%;
+    padding:10px;
+    font-size:16px;
+}
+
+.form2 button{
+    width:100%;
+    padding:12px;
+    margin-top:15px;
+    background:darkgreen;
+    color:white;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+    border-radius:5px;
+}
+
+.form2 button:hover{
+    background:#219150;
+}
+
+/* Table */
+
+.display{
+    overflow-x:auto;
+}
+
+.expense-table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+}
+
+.expense-table th{
+    background:#2c3e50;
+    color:white;
+    padding:12px;
+}
+
+.expense-table td{
+    padding:12px;
+}
+
+.expense-table th,
+.expense-table td{
+    border:1px solid #ddd;
+    text-align:left;
+}
+
+.expense-table tr:nth-child(even){
+    background:#f5f5f5;
+}
+
+.expense-table tr:hover{
+    background:#ececec;
+}
