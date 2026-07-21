@@ -16,6 +16,10 @@ def home(request):
     else:
         form = ExpenseForm()
 
+    category = request.GET.get("category")
+
+    if category:
+        expenses = expenses.filter(category=category)
 
 
     context = {
@@ -59,6 +63,15 @@ def update_expense(request,expense_id):
     }
 
     return render(request,'update.html',context)
+
+
+
+def analysis(request):
+    return render(request,'analysis.html')
+
+
+
+
 
     
 

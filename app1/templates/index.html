@@ -25,6 +25,24 @@
         </form>
 
         <div class="display">
+            <div class="analysis">
+
+            <form action="" method="get">
+                <select name="category" id="">
+                    <option value="">All Categories</option>
+
+                    {% for value,label in  form.category.field.choices %}
+                    <option value="{{ value }}" {% if request.GET.category == value %}selected{% endif %}>
+                        {{ label }}
+                    </option>
+                    {% endfor %}
+                </select>
+
+                <button type="submit">Filter</button>
+            </form>
+            
+                <a href="{% url 'analysis' %}">Analysis</a>
+            </div>
 
             <table class="expense-table">
                 <thead>

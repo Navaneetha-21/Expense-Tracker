@@ -114,3 +114,12 @@ body{
 .expense-table tr:hover{
     background:#ececec;
 }
+
+
+/* Analysis Button */
+.analysis{
+    a{
+        margin-top: 20px;
+    }
+
+}
