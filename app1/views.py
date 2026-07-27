@@ -2,7 +2,10 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from . forms import ExpenseForm
 from . models import Expense
+from django.contrib.auth.decorators import login_required
 
+
+@login_required(login_url='login')
 def home(request):
 
     expenses = Expense.objects.all()
@@ -26,7 +29,6 @@ def home(request):
         'form':form,
         'expenses':expenses
     }
-
 
 
     return render(request,'index.html',context)
