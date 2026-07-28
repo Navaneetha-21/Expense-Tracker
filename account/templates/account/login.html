@@ -1,0 +1,47 @@
+{% extends 'account/base.html' %}
+
+{% load static %}
+{% block title %}SignIn{% endblock title %}
+
+{% block account_css %}
+    <link rel="stylesheet" href="{% static 'account/css/login.css' %}">
+{% endblock account_css %}
+
+
+{% block content %}
+
+<div class="main-container">
+    <div class="field-container">
+        <h1>Login</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+
+            <div class="field">
+                <label for="">Username</label><br>
+                <input type="text" placeholder="Enter Username" name="username" required>
+            </div>
+            <br>
+
+            <div class="field">
+                <label for="">Password</label><br>
+                <input type="password" placeholder="Enter Password" name="pass1" required>
+            </div>
+            
+            <br>
+
+            {% if errors %}
+                <p style="color: red;">{{ errors }}</p>
+            {% endif %}
+
+            <div class="btn">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+
+        
+        <p class="signup-link">Don't have a account ?<a href="{% url 'register' %}">Register</a></p>
+
+    </div>
+</div>
+
+{% endblock content %}

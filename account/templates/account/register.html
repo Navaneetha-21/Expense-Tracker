@@ -1,9 +1,10 @@
-{% extends 'base.html' %}
+{% extends 'account/base.html' %}
+{% load static %}
 
-{% block title %}SignIn{% endblock title %}
+{% block title %}SignUp{% endblock title %}
 
 {% block account_css %}
-
+    <link rel="stylesheet" href="{% static 'account/css/register.css' %}">
 {% endblock account_css %}
 
 
@@ -21,18 +22,31 @@
             <br>
 
             <div class="field">
+                <label for="">Email</label>
+                <input type="email" placeholder="Enter User Email." name="email" required>
+            </div>
+
+            <br>
+            <div class="field">
                 <label for="">Password</label>
                 <input type="password" placeholder="Enter Password" name="pass1" required>
             </div>
             
             <br>
+            <div class="field">
+                <label for="">Confirm Password</label>
+                <input type="password" placeholder="Enter Password Again.." name="pass2" required>
+            </div>
+
 
             {% if errors %}
-                <p style="color: red;">{{ errors }}</p>
+            {% for error in erros %}
+                <p style="color: red;">{{ error }}</p>
+            {% endfor %}
             {% endif %}
 
             <div class="btn">
-                <button type="submit">Login</button>
+                <button type="submit">Signup</button>
             </div>
         </form>
 

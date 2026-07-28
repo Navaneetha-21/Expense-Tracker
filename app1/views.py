@@ -7,6 +7,8 @@ from django.contrib.auth.decorators import login_required
 
 @login_required(login_url='login')
 def home(request):
+    print(request.user)
+    print(request.user.is_authenticated)
 
     expenses = Expense.objects.all()
 
@@ -31,7 +33,7 @@ def home(request):
     }
 
 
-    return render(request,'index.html',context)
+    return render(request,'app1/index.html',context)
 
 
 def delete_expense(request,expense_id):
@@ -43,7 +45,7 @@ def delete_expense(request,expense_id):
     context ={
         'expense' : expense
     }
-    return render(request,'delete.html',context)
+    return render(request,'app1/delete.html',context)
 
 
 
@@ -64,12 +66,12 @@ def update_expense(request,expense_id):
         'form':form,
     }
 
-    return render(request,'update.html',context)
+    return render(request,'app1/update.html',context)
 
 
 
 def analysis(request):
-    return render(request,'analysis.html')
+    return render(request,'app1/analysis.html')
 
 
 

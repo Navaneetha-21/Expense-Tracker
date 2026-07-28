@@ -1,0 +1,108 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+background-image: url("https://img.magnific.com/free-photo/abstract-digital-grid-black-background_53876-97647.jpg?semt=ais_hybrid&w=740&q=80");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.field-container{
+
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    width: 350px;
+    padding: 50px;
+    border-radius: 20px;
+   
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+    color: #ffffff;
+   
+    h1{
+        letter-spacing: 1px;
+        font-size: 2rem;
+    }
+    
+
+    .field{
+       label{
+        font-size: 1.5rem;
+        transform: translate(-50%);
+        color: rgba(255,255,255,0.7);
+        transition: 0.3s ease;
+       }
+
+       input{
+        margin-top: 10px;
+        height: 20px;
+        width: 200px;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 10px;
+        background: transparent;
+        color: #fff;
+        transition: 0.3s ease;
+        font-size: 1rem;
+       }
+    }
+}
+
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button{
+        padding: 12px 22px;
+        border: 2px solid #a0a0a0;
+        border-radius: 10px;
+        color: #121212;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        background: transparent;
+        background: #415e4d;
+        
+    }
+
+    button:hover{
+                    background:  #415e4d;
+            box-shadow: 0 6px 20px rgba(0, 200, 83, 0.6);
+            transform: translateY(-1px);
+    }
+
+ 
+
+
+
+
+}
+
+.signup-link{
+    font-size: 1rem;
+}
+
+.signup-link a{
+    text-decoration: none;
+    color: wheat;
+    margin-left: 5px;
+}

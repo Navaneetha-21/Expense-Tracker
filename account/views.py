@@ -40,7 +40,7 @@ def register_view(request):
             login(request,user)
             return redirect('home')
 
-    return render(request,'register.html',context)
+    return render(request,'account/register.html',context)
 
 
 def login_view(request):
@@ -60,7 +60,7 @@ def login_view(request):
         else:
             context['errors'] = "Invalid Credentials"
 
-    return render(request,'login.html',context)
+    return render(request,'account/login.html',context)
 
 
 
